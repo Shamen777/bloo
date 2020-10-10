@@ -16,7 +16,15 @@ body{
 *::before{
     margin: 0;
     padding: 0;
+    user-select: none;
+    outline: none;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(0, 0, 0, 0.0);
 }
 
 a{
@@ -72,14 +80,13 @@ h2{
     background-color: var(--white);
     position: absolute;
     border-radius: 100px;
-    transition: ease-out 0.3s;
+    transition: ease-out 0.4s;
     z-index: 1;
 }
 
 
-@media screen and (max-width: 900px)
-{
-    
+@media screen and (max-width: 900px){
+
     /* menu */
 
     .menu{
