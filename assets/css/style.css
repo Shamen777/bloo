@@ -3,7 +3,7 @@
 body{
     --black: #000;
     --white: #fff;
-    --index: blue;
+    --index: #30558b;
     --gray: gray;
     overflow-x: hidden;
     background: var(--bg);
@@ -39,12 +39,6 @@ textarea, button, input{
     border: 1px solid var(--line);
 }
 
-h2{
-    text-align: center;
-    color: var(--index);
-}
-
-
 
 
 /* menu */
@@ -57,6 +51,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
 }
 
 .menu_items{
@@ -83,6 +78,148 @@ h2{
     transition: ease-out 0.4s;
     z-index: 1;
 }
+
+
+
+
+/* header */
+
+.title_section{
+    min-height: 64vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.title_section h1{
+    width: 60%;
+    font-weight: 400;
+    font-size: 3vw;
+}
+
+.title_section #title_element{
+    color: var(--index);
+}
+
+.video_section,
+.video_section video{
+    width: 100%;
+}
+
+
+
+/* about_section */
+
+.about_section{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about_section_text{
+    position: sticky;
+    top: 30px;
+    width: 40%;
+    padding: 5%;
+}
+
+.about_section_text h2{
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.about_section_text h4{
+    margin: 25px 0px;
+    width: 50%;
+}
+
+.about_section_text p{
+    margin-bottom: 15px;
+}
+
+.about_section_text a{
+    display: block;
+    padding: 20px;
+    max-width: 300px;
+    font-weight: 700;
+    border: 1px solid var(--black);
+    margin-top: 20px;    
+}
+
+.about_section_img{
+    width: 60%;
+    padding: 5%;
+}
+
+.about_section_img img{
+    width: 100%;
+}
+
+
+
+
+/* work */
+
+
+
+.glider{
+    cursor: grab;
+}
+
+.glider_item{
+    padding: 2.2%;
+}
+
+.glider_item .img_wrap{
+    height: 80vh;
+    overflow: hidden;
+}
+
+.glider_item img{
+    width: 100%;
+}
+
+
+.glider_info{
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 40%;
+    height: 100%;
+    transition: opacity ease-out 1s;
+    z-index: 1;
+    padding: 5%;
+}
+
+.glider_info h2{
+	font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.glider_info p{
+    margin-bottom: 15px;
+}
+
+.glider_info a{
+    display: block;
+    padding: 20px;
+    font-weight: 700;
+    border: 1px solid var(--black);
+    margin-top: 50px; 
+    max-width: 300px; 
+}
+
+
+
+
+footer{
+    height: 100vh;
+}
+
+
 
 
 @media screen and (max-width: 900px){
