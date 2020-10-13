@@ -165,6 +165,7 @@ textarea, button, input{
 
 .glider{
     cursor: grab;
+    min-height: 500px;
 }
 
 .glider_item{
@@ -172,7 +173,7 @@ textarea, button, input{
 }
 
 .glider_item .img_wrap{
-    height: 80vh;
+    height: 70vh;
     overflow: hidden;
 }
 
@@ -182,7 +183,7 @@ textarea, button, input{
 
 
 .glider_info{
-	position: absolute;
+    position: absolute;
 	top: 0;
 	left: 0;
     width: 40%;
@@ -208,19 +209,60 @@ textarea, button, input{
     padding: 20px;
     font-weight: 700;
     border: 1px solid var(--black);
-    margin-top: 50px; 
+    margin-top: 30px; 
     max-width: 300px; 
 }
 
+.next_page_btn{
+    background: var(--black);
+    color: var(--white);
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-
+.next_page_btn a{
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
 
 footer{
-    height: 100vh;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 120px;
+    max-width: 200px;
+}
+
+.footer_box h4{
+    margin-bottom: 10px;
+    color: var(--gray);
+}
+
+.footer_box a{
+    margin-bottom: 5px;
+}
+
+.footer_box a:hover{
+    color: var(--index);
 }
 
 
-
+.init_section{
+    height: 100vh;
+    width: 100%;
+    border: 10px solid var(--black)
+}
 
 @media screen and (max-width: 900px){
 
