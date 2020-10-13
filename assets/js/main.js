@@ -1,16 +1,3 @@
-function menuToggleActive(page_name) {
-    const menu_items = document.querySelectorAll('.menu a');
-    const menu_item_active = document.querySelector('.menu_item_active');
-
-    menu_items.forEach(element => {
-        if (element.getAttribute('data-barba-trigger') == page_name) {
-            let element_data = element.getBoundingClientRect();
-            menu_item_active.style.width = element_data.width + 'px';
-            menu_item_active.style.left = element_data.left + 'px';
-        }
-    });
-}
-
 window.addEventListener('load', function () {
 
     function contentAnimation(data) {
@@ -19,6 +6,10 @@ window.addEventListener('load', function () {
         // console.log('contentAnimation');
         // console.log('page name - ' + page_name);
         menuToggleActive(page_name);
+
+        if (page_name == 'index'){
+            homeShow();
+        }
     }
 
     function pageTransition(data) {
@@ -62,11 +53,4 @@ window.addEventListener('load', function () {
     });
 
     console.log('Hello @diana_korkunova');
-})
-
-
-
-window.addEventListener('resize', function(){
-    const page_name = document.querySelector('main').getAttribute('data-barba-namespace');
-    menuToggleActive(page_name)
 })
